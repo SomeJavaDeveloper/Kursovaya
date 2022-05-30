@@ -33,6 +33,7 @@ namespace LR3
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -43,13 +44,14 @@ namespace LR3
             this.ViewResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.ViewResults.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ViewResults.ForeColor = System.Drawing.SystemColors.Control;
             this.ViewResults.HideSelection = false;
             this.ViewResults.Location = new System.Drawing.Point(0, 0);
             this.ViewResults.Name = "ViewResults";
-            this.ViewResults.Size = new System.Drawing.Size(501, 481);
+            this.ViewResults.Size = new System.Drawing.Size(798, 483);
             this.ViewResults.TabIndex = 0;
             this.ViewResults.UseCompatibleStateImageBehavior = false;
             this.ViewResults.View = System.Windows.Forms.View.Details;
@@ -72,13 +74,18 @@ namespace LR3
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 170;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Имена постояльцев";
+            this.columnHeader4.Width = 310;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(74)))), ((int)(((byte)(77)))));
             this.panel3.Controls.Add(this.ViewResults);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(483, 482);
+            this.panel3.Size = new System.Drawing.Size(798, 476);
             this.panel3.TabIndex = 33;
             // 
             // Form2
@@ -86,12 +93,12 @@ namespace LR3
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(505, 500);
+            this.ClientSize = new System.Drawing.Size(822, 500);
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
-            this.Text = "OOP Kosenko Akmashev #3 part 2";
+            this.Text = "Список гостей";
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -104,5 +111,6 @@ namespace LR3
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

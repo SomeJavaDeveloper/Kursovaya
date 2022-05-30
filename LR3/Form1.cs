@@ -104,13 +104,7 @@ namespace LR3
         {
             if (guestName.Text.Length == 0)
             {
-                MessageBox.Show("Введите название гостиницы!");
-                return false;
-            }
-
-            if (Hotels.ContainsKey(guestName.Text))
-            {
-                MessageBox.Show("Гостиница с этим названием уже существует!");
+                MessageBox.Show("Введите имя гостя");
                 return false;
             }
             return true;

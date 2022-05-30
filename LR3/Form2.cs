@@ -17,7 +17,8 @@ namespace LR3
 
         public Form2()
         {
-            InitializeComponent();
+			this.FormBorderStyle = FormBorderStyle.FixedSingle;
+			InitializeComponent();
 
 			foreach (Room r in Hotel.getInstance().RoomList_)
 			{
@@ -26,32 +27,22 @@ namespace LR3
 				resultItem.SubItems.Add(r.GuestArray_.Length.ToString());
 
 				int freePlacesCount = 0;
+				string guestsName = "";
 				foreach (Guest g in r.GuestArray_)
                 {
 					if(g == null)
                     {
 						freePlacesCount++;
+					} else
+                    {
+						guestsName += g.Name_ + "; ";
 					}
                 }
 				resultItem.SubItems.Add(freePlacesCount.ToString());
+				resultItem.SubItems.Add(guestsName);
 
 				ViewResults.Items.Add(resultItem);
 			}
-		}
-
-        private void CompareButton_Click(object sender, EventArgs e)
-        {
-			Hashtable example1 = new Hashtable(100000);
-			Hotel[] example2 = new Hotel[100000];
-
-
-			ListViewItem resultItem = new ListViewItem();
-
-			String result1, result2, choiceType;
-
-
-
-			ViewResults.Items.Add(resultItem);
 		}
 
         private void ViewResults_SelectedIndexChanged(object sender, EventArgs e)

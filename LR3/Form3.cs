@@ -17,6 +17,7 @@ namespace LR3
 
         private async void Form3_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             await PutTaskDelay();
             this.Close();
         }
