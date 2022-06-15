@@ -9,7 +9,7 @@ namespace LR3
 {
     public partial class Form1 : Form
     {
-
+        string baseFile = "[{\"RoomNumber_\":1,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[{\"Id_\":1,\"IdCounter_\":2,\"Name_\":\"\\u0413\\u043E\\u0441\\u0442\\u044C-1\",\"IsVipClient_\":true,\"IsSeaLandscapeRequired_\":true,\"WantToBeAlone_\":false},null]},{\"RoomNumber_\":2,\"IsVip_\":false,\"IsSeaLandscape_\":false,\"GuestArray_\":[null,null]},{\"RoomNumber_\":3,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[null,null]},{\"RoomNumber_\":4,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[null]},{\"RoomNumber_\":5,\"IsVip_\":false,\"IsSeaLandscape_\":true,\"GuestArray_\":[null,null]},{\"RoomNumber_\":6,\"IsVip_\":false,\"IsSeaLandscape_\":false,\"GuestArray_\":[null]},{\"RoomNumber_\":7,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[null,null]},{\"RoomNumber_\":8,\"IsVip_\":true,\"IsSeaLandscape_\":false,\"GuestArray_\":[null]},{\"RoomNumber_\":9,\"IsVip_\":true,\"IsSeaLandscape_\":false,\"GuestArray_\":[null,null]},{\"RoomNumber_\":10,\"IsVip_\":false,\"IsSeaLandscape_\":false,\"GuestArray_\":[null]},{\"RoomNumber_\":11,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[null,null]},{\"RoomNumber_\":12,\"IsVip_\":false,\"IsSeaLandscape_\":false,\"GuestArray_\":[null]},{\"RoomNumber_\":13,\"IsVip_\":false,\"IsSeaLandscape_\":true,\"GuestArray_\":[null,null]},{\"RoomNumber_\":14,\"IsVip_\":true,\"IsSeaLandscape_\":true,\"GuestArray_\":[null]},{\"RoomNumber_\":15,\"IsVip_\":true,\"IsSeaLandscape_\":false,\"GuestArray_\":[null,null]}]";
         Hashtable Hotels = new Hashtable();
 
         public Form1()
@@ -28,9 +28,27 @@ namespace LR3
             if (!guestsJsonFile.Exists)
             {
                 File.Create(Path).Close();
+                StreamWriter jsonWriter = new StreamWriter(Path, false);
+                jsonWriter.WriteLine(baseFile);
+                jsonWriter.Flush();
+                jsonWriter.Close();
             }
+
+            List<Room> DeserRoomList;
             string jsonString = File.ReadAllText(Path);
-            List<Room> DeserRoomList = JsonSerializer.Deserialize<List<Room>>(jsonString);
+            if (jsonString == "")
+            {
+                StreamWriter jsonWriter = new StreamWriter(Path, false);
+                jsonWriter.WriteLine(baseFile);
+                jsonWriter.Flush();
+                jsonWriter.Close();
+                DeserRoomList = new List<Room>();
+            }
+            else 
+            { 
+                DeserRoomList = JsonSerializer.Deserialize<List<Room>>(jsonString);
+            }
+
             Hotel.getInstance().RoomList_ = DeserRoomList;
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -173,6 +191,11 @@ namespace LR3
             jsonWriter.WriteLine(serializedTree);
             jsonWriter.Flush();
             jsonWriter.Close();
+        }
+
+        private void outName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

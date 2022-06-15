@@ -69,7 +69,7 @@ namespace LR3
             this.roomsInfo.BackColor = System.Drawing.Color.SteelBlue;
             this.roomsInfo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.roomsInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roomsInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.roomsInfo.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.roomsInfo.ForeColor = System.Drawing.SystemColors.Control;
             this.roomsInfo.Location = new System.Drawing.Point(174, 418);
             this.roomsInfo.Name = "roomsInfo";
@@ -94,13 +94,14 @@ namespace LR3
             // outName
             // 
             this.outName.BackColor = System.Drawing.Color.Transparent;
-            this.outName.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.outName.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.outName.ForeColor = System.Drawing.SystemColors.Control;
             this.outName.Location = new System.Drawing.Point(13, 16);
             this.outName.Name = "outName";
             this.outName.Size = new System.Drawing.Size(565, 295);
             this.outName.TabIndex = 20;
             this.outName.Text = "Комната не выбрана";
+            this.outName.Click += new System.EventHandler(this.outName_Click);
             // 
             // roomsList
             // 
@@ -120,7 +121,7 @@ namespace LR3
             this.deleteObject.BackColor = System.Drawing.Color.SteelBlue;
             this.deleteObject.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.deleteObject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteObject.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.deleteObject.Font = new System.Drawing.Font("Bahnschrift Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deleteObject.ForeColor = System.Drawing.SystemColors.Control;
             this.deleteObject.Location = new System.Drawing.Point(241, 314);
             this.deleteObject.Name = "deleteObject";
@@ -154,7 +155,7 @@ namespace LR3
             this.saveAll.BackColor = System.Drawing.Color.SteelBlue;
             this.saveAll.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.saveAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.saveAll.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveAll.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.saveAll.ForeColor = System.Drawing.SystemColors.Control;
             this.saveAll.Location = new System.Drawing.Point(176, 418);
             this.saveAll.Name = "saveAll";
@@ -197,44 +198,44 @@ namespace LR3
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(12, 143);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 33);
+            this.label5.Size = new System.Drawing.Size(226, 33);
             this.label5.TabIndex = 23;
             this.label5.Text = "Номер на одного";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(12, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 33);
+            this.label4.Size = new System.Drawing.Size(169, 33);
             this.label4.TabIndex = 22;
             this.label4.Text = "Вид на море";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(12, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 33);
+            this.label3.Size = new System.Drawing.Size(139, 33);
             this.label3.TabIndex = 21;
             this.label3.Text = "VIP номер";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(12, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 33);
+            this.label2.Size = new System.Drawing.Size(219, 33);
             this.label2.TabIndex = 20;
             this.label2.Text = "Имя постояльца";
             // 
@@ -254,7 +255,7 @@ namespace LR3
             this.addObject.BackColor = System.Drawing.Color.SteelBlue;
             this.addObject.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.addObject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addObject.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addObject.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addObject.ForeColor = System.Drawing.SystemColors.Control;
             this.addObject.Location = new System.Drawing.Point(176, 358);
             this.addObject.Name = "addObject";
