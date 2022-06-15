@@ -133,7 +133,7 @@ namespace LR3
 			bool isVipB = isVip.Checked;
 			bool isSeaLandscapeB = isSeaLandscape.Checked;
 			foreach (Room r in Hotel.getInstance().RoomList_)
-			{
+			{ 
 				ListViewItem resultItem = new ListViewItem();
 				resultItem.Text = r.RoomNumber_.ToString();
 				resultItem.SubItems.Add(r.GuestArray_.Length.ToString());
